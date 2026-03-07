@@ -42,23 +42,23 @@
         </div>
         </nav>
 </header>
-<main class="bg-base-200 pt-5 sm:pt-15">
-    <section class="w-5/7 mx-auto">
-       <div class="bg-white border border-red-500 p-5 rounded-md space-x-2 mb-4">
-        <button class="btn btn-primary">All</button>
-        <button class="btn">Open</button>
-        <button class="btn">Closed</button>
+<main class="bg-base-200 pt-5 sm:pt-10">
+    <section class="w-3/4 mx-auto">
+       <div class="bg-white shadow-lg p-5 rounded-md space-x-2 mb-4">
+        <button id="all-btn" class="btn btn-primary btns" onclick="loadAllCard()">All</button>
+        <button id="open-btn" class="btn btns" onclick="loadOpenCard()">Open</button>
+        <button id="closed-btn" class="btn btns" onclick="loadClosedCard()">Closed</button>
        </div>
     </section>
-    <section class="w-5/7 mx-auto">
-      <div class="  sm:flex justify-between bg-white border border-red-500 p-2 sm:p-5 rounded-md  ">
+    <section class="w-3/4 mx-auto">
+      <div class="  sm:flex justify-between bg-white shadow-lg p-2 sm:p-5 rounded-md  ">
         <div class="flex gap-3 items-center">
         <div class="bg-purple-200 p-2 rounded-full">
         <img src="./assets - Copy/Aperture.png"  alt="">
         </div>
         
         <div>
-            <h2 class="font-semibold text-[20px]"> <span >0</span> Issues</h2>
+            <h2 class="font-semibold text-[20px]"> <span id="total-count" >0</span> Issues</h2>
             <p class="text-[#64748B]">Track and manage your project issues</p>
         </div>
         </div>
@@ -71,7 +71,7 @@
       </div>
 
     </section>
-    <section id="card-container" class="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-3 w-5/7 mx-auto p-6 bg-white shadow-lg" >
+    <section id="card-container" class="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-3 w-3/4 mx-auto p-6 bg-base-400 shadow-lg" >
       
     </section>
 </main>
