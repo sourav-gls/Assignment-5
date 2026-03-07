@@ -33,7 +33,6 @@ function loadOpenCard(){
     .then(res=>res.json())
     .then(data=>{
        cards = data.data;
-       console.log(cards);
        const openCard = cards.filter(card=> card.status ==="open")
        displayCard(openCard)
     })
@@ -50,7 +49,6 @@ function loadClosedCard(){
     .then(res=>res.json())
     .then(data=>{
        cards = data.data;
-       console.log(cards);
        const closedCard = cards.filter(card=> card.status ==="closed")
        displayCard(closedCard)
     })
@@ -63,8 +61,7 @@ function displayCard(items){
     cardContainer.innerHTML = "" ;
    for (let item of items){
     const div = document.createElement("div");
-    div.className = "bg-white rounded-md  p-4 shadow-md ";
-    div.classList.add()
+    div.className = `bg-white rounded-md  p-4 shadow-md ${item.status === "open"? 'border-t-4 border-green-500':'border-t-4 border-purple-500'} `;
     div.innerHTML = `
     <div class="flex justify-between ">
                 <div>
