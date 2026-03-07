@@ -1,0 +1,123 @@
+<div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+
+
+
+
+
+               <div class="bg-white rounded-md border border-red-500 p-4 shadow-md">
+             <div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+        </div>
+        <div class="bg-white rounded-md border border-red-500 p-4">
+             <div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+        </div>
+        <div class="bg-white rounded-md border border-red-500 p-4">
+             <div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+        </div>
+        <div class="bg-white rounded-md border border-red-500 p-4">
+             <div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+        </div>
+        <div class="bg-white rounded-md border border-red-500 p-4">
+             <div class="flex justify-between">
+                <img src="./assets - Copy/Open-Status.png" alt="">
+                <div class="badge badge-soft badge-secondary">High</div>
+             </div>
+             <div class="pt-3 space-y- ">
+                <h5 class="font-bold text-[14px] ">Fix navigation menu on mobile devices</h5>
+                <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                <div class="flex gap-1 mt-2">
+                     <div class="badge badge-soft badge-secondary">High</div>
+                     <div class="badge badge-soft badge-secondary">High</div>
+                </div>
+             </div>
+             <hr class="border-gray-200 mt-4 mb-4">
+             <div class="text-[#64748B] space-y-2 text-[12px]">
+                <p>#1 by john_doe</p>
+                <p>1/15/2024</p>
+                      
+             </div>
+        </div>
