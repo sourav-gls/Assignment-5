@@ -91,33 +91,32 @@
     </div>
     
     </section>
-    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <dialog id="card-details-modal" class="modal modal-bottom sm:modal-middle">
     <div class="modal-box ">
-    <h2 class="text-[1.5rem] font-bold mb-2">Fix broken image uploads</h2>
+    <h2 class="text-[24px] font-bold mb-2" id="modal-title"></h2>
     <div class="space-y-4">
-       <div class="flex gap-5">
-        <div class="badge badge-soft badge-secondary rounded-full">open</div>
-         <ul class="list-disc flex  "></ul>
-        <li class="mr-5 text-[#64748B]">Opened by Fahim Ahmed</li>
-        <li class="text-[#64748B]">22/02/2026</li>
+       <div class="flex gap-5 ">
+        <div class="" id="modal-status"></div>
+         <ul class="list-disc flex"></ul>
+        <li class="mr-5 text-[#64748B] text-[12px]">Opened by <span id="modal-author"></span></li>
+        <li class="text-[#64748B] text-[12px]" id="modal-create"></li>
         </ul>
         </div>
-        <div>
+        <div id="modal-badge" class="space-x-2">
 
         </div>
-        <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+        <p class="text-[#64748B] text-[16px]" id="modal-description"></p>
         <div class="flex gap-30 rounded-lg bg-gray-200 p-3">
-            <p class="text-[#64748B]">Assignee: <br> <span class="font-semibold text-black">Fahim Ahmed</span></p>
+            <p class="text-[#64748B] text-[16px]">Assignee: <br> <span class="font-semibold text-black" id="modal-assignee"></span></p>
             <div>
             <P class="text-[#64748B]">Priority: </P>
-            <div class="badge badge-soft badge-secondary rounded-full">open</div>
+            <div class="text-center" id="modal-priority"></div>
             </div>
         </div>
     </div>
     <div class="modal-action">
       <form method="dialog">
-        <button class="btn">Close</button>
+        <button class="btn btn-primary">Close</button>
       </form>
     </div>
     </div>

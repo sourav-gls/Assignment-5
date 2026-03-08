@@ -6,9 +6,15 @@ const allBtn = document.getElementById("all-btn");
 const loadingDiv = document.getElementById("loading-spinner");
 const search = document.getElementById("input-search");
 const noMatch = document.getElementById("no-match");
-
-
-
+const modalTitle = document.getElementById("modal-title");
+const modalDescription = document.getElementById("modal-description");
+const modalStatusDiv = document.getElementById("modal-status");
+const modalCreate = document.getElementById("modal-create");
+const modalAuthor = document.getElementById("modal-author");
+const modalAssignee = document.getElementById("modal-assignee");
+const modalBadgeDiv = document.getElementById("modal-badge");
+const modalPriorityDiv = document.getElementById("modal-priority");
+const cardDetailsModal = document.getElementById("card-details-modal");
 
 
 
@@ -48,6 +54,7 @@ function loadOpenCard(){
 
 }
 
+
 function loadClosedCard(){
    let cards = [];
    closedBtn.classList.add("btn-primary");
@@ -81,7 +88,7 @@ function displayCard(items){
                 <div>${priority(item.priority)}</div>
              </div>
              <div class="pt-3 space-y-2 ">
-                <h5 class="font-bold text-[16px] min-h-[42px] ">${item.title}</h5>
+                <h5 class="font-bold text-[16px] min-h-[42px]" onclick= "loadModal(${item.id})" >${item.title}</h5>
                 <p class="text-[#64748B] text-[12px] line-clamp-2">${item.description}</p>
                 <div class=" space-x-1 mt-2">
                      ${levels(item.labels)}
@@ -113,7 +120,7 @@ function displayCard(items){
 function priority(id){
    const priorityBtn = document.createElement("div")
    if(id==="high"){
-      return `<span class ="badge text-red-500 bg-red-100 rounded-2xl  text-[12px]">HIGH<span>`
+      return `<span class ="badge text-red-500 bg-red-100 rounded-2xl text-[12px]">HIGH<span>`
    }
    else if(id==="medium"){
       return `<span class ="badge text-yellow-500 bg-yellow-100 rounded-2xl text-[12px]">MEDIUM<span>`
@@ -128,7 +135,7 @@ function priority(id){
 function levels(arr){
    let highlight = "";
 for(let i=0 ; i<arr.length ; i++){
-   highlight += `<span class ="badge bg-lime-100">${arr[i]}</span>`;
+   highlight += `<span class ="badge bg-lime-100 text-[15px] rounded-full">${arr[i].toUpperCase()}</span>`;
 }
    return highlight ;
 }
@@ -168,7 +175,40 @@ function loadSearch(){
 })
 }
 
-
 loadSearch()
+
+
+function loadModal(id){
+   
+  cardDetailsModal.showModal()
+
+   fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
+   .then(res=>res.json())
+   .then(data=>{
+   
+    let obj = data.data;
+
+      modalTitle.innerText = obj.title ;
+      modalDescription.innerText = obj.description ;
+      modalCreate.innerText = obj.createdAt ;
+      modalBadgeDiv.innerHTML = levels(obj.labels) ;
+      modalPriorityDiv.innerHTML = priority(obj.priority);
+      modalStatusDiv.innerHTML = isOpen(obj.status);
+      modalAuthor.innerText = obj.author ;
+      modalAssignee.innerText = obj.assignee ;
+
+
+   })
+
+}
+
+function isOpen(id){
+if(id==="open"){
+   return `<span class="badge bg-green-400 text-white rounded-full">Opened</span>`
+}
+else{
+   return `<span class="badge bg-purple-400 text-white rounded-full">Closed</span>`
+}
+}
 
 
