@@ -3,7 +3,12 @@ const totalCount = document.getElementById("total-count");
 const openBtn = document.getElementById("open-btn");
 const closedBtn = document.getElementById("closed-btn");
 const allBtn = document.getElementById("all-btn");
-const loadingDiv = document.getElementById("loading-spinner")
+const loadingDiv = document.getElementById("loading-spinner");
+const search = document.getElementById("input-search");
+const noMatch = document.getElementById("no-match");
+
+
+
 
 
 
@@ -91,6 +96,13 @@ function displayCard(items){
     cardContainer.append(div);
    }
    totalCount.innerText = cardContainer.children.length;
+   if(totalCount.innerText=="0"){
+      showNoMatch()
+   
+   }
+   else{
+      hideNoMatch()
+   }
 }
 
 
@@ -130,4 +142,33 @@ function removeLoadingSpinner(){
     loadingDiv.classList.add("hidden");
     cardContainer.classList.remove("hidden");
 }
+
+function showNoMatch(){
+   noMatch.classList.remove("hidden");
+}
+
+function hideNoMatch(){
+   noMatch.classList.add("hidden");
+}
+
+
+function loadSearch(){
+
+   search.addEventListener("input",function(){
+    const searchValue = search.value;
+    fetch(` https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue} `)
+    .then(res=>res.json())
+    .then(data=>{
+       openBtn.classList.remove("btn-primary");
+       closedBtn.classList.remove("btn-primary");
+       allBtn.classList.remove("btn-primary") ;
+      displayCard(data.data)
+      
+})
+})
+}
+
+
+loadSearch()
+
 

@@ -23,6 +23,7 @@
            <h3 class="text-[26px] font-semibold ">GitHub Issues Tracker</h3>
         </div>
         <div class="flex gap-2">
+        
          <label class="input">
          <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <g
@@ -36,21 +37,21 @@
          <path d="m21 21-4.3-4.3"></path>
          </g>
         </svg>
-        <input type="search" required placeholder="Search issues..." />
+        <input id="input-search" type="search" required placeholder="Search issues..." />
         </label>
         <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
         </div>
         </nav>
 </header>
 <main class="bg-base-200 pt-5 sm:pt-10">
-    <section class="w-3/4 mx-auto">
+    <section class="w-3/4 mx-auto sticky top-0">
        <div class="bg-white shadow-lg p-5 rounded-md space-x-2 mb-4">
         <button id="all-btn" class="btn btn-primary btns" onclick="loadAllCard()">All</button>
         <button id="open-btn" class="btn btns" onclick="loadOpenCard()">Open</button>
         <button id="closed-btn" class="btn btns" onclick="loadClosedCard()">Closed</button>
        </div>
     </section>
-    <section class="w-3/4 mx-auto">
+    <section class="w-3/4 mx-auto ">
       <div class="  sm:flex justify-between bg-white shadow-lg p-2 sm:p-5 rounded-md  ">
         <div class="flex gap-3 items-center">
         <div class="bg-purple-200 p-2 rounded-full">
@@ -72,13 +73,55 @@
 
     </section>
     <section>
-    <div id="card-container" class="  grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-3 w-3/4 mx-auto p-6 bg-base-400  shadow-lg" >
+
+    <div id="card-container" class=" grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-3 w-3/4 mx-auto p-6 bg-base-400  shadow-lg" >
     </div>
+
     <div id="loading-spinner" class="w-3/4 mx-auto bg-base-400 flex justify-center h-[61vh] ">
-        
         <span class="loading loading-spinner loading-xl"></span>
     </div>
+
+    <div id="no-match" class="w-3/4 mx-auto bg-base-400 flex flex-col justify-center sm:h-[55vh] text-center sm:space-y-3 hidden shadow-lg  ">
+    <div class="border-2 border-gray-400 pt-7 pb-7 rounded-lg sm:pt-10 sm:pb-10 ">
+       <span> <i class="fa-solid fa-triangle-exclamation fa-3x"></i></span>
+    <h1 class="font-bold text-[1.5rem] sm:text-[2.5rem]">No Matches Found</h1>
+    <p class="font-semibold text-[0.80rem] sm:text-[1.5rem] text-gray-400">Sorry, we couldn't find any results for your search.</p>
+    <p class="font-semibold text-[0.80rem] sm:text-[1.5rem] text-gray-400">Try searching with different keywords.</p>
+    </div>
+    </div>
+    
     </section>
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box ">
+    <h2 class="text-[1.5rem] font-bold mb-2">Fix broken image uploads</h2>
+    <div class="space-y-4">
+       <div class="flex gap-5">
+        <div class="badge badge-soft badge-secondary rounded-full">open</div>
+         <ul class="list-disc flex  "></ul>
+        <li class="mr-5 text-[#64748B]">Opened by Fahim Ahmed</li>
+        <li class="text-[#64748B]">22/02/2026</li>
+        </ul>
+        </div>
+        <div>
+
+        </div>
+        <p class="text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+        <div class="flex gap-30 rounded-lg bg-gray-200 p-3">
+            <p class="text-[#64748B]">Assignee: <br> <span class="font-semibold text-black">Fahim Ahmed</span></p>
+            <div>
+            <P class="text-[#64748B]">Priority: </P>
+            <div class="badge badge-soft badge-secondary rounded-full">open</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+    </div>
+    </dialog>
 </main>
 
 
