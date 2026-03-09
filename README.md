@@ -1,129 +1,135 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+ 1️⃣ What is the difference between var, let, and const?
+ Ans:
+  var => 1.Function scoped
+         2.Can be redeclared
+         3.Can be reassigned
+         4.Hoisted but initialized with undefined
+    [
+    console.log(x) //undefined
+    var x = 2 ;
+    var x = 3 ; (allowed)
+    x = 4 ; (allowed)
+    ]
+    [
+    if(true){
+        var x = 5 ;
+    }
+    console.log(x)  //5
+    ]
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+    let => 1.Block scoped
+           2.Cannot be redeclared
+           3.Can be reassigned
+           4.Hoisted but not initialized (temporal dead zone)
+    [
+    let x = 2 ;
+    let x = 3 ; (not allowed)
+    x = 4 ; (allowed)
+    ]   
+    [
+        let x = 3 ;
 
----
+        {
+            let x = 5;
+        }
+        console.log(x) //3
+    ]
 
-# Assignment-05: GitHub Issues Tracker
+   const => 1.Block scoped
+            2.Cannot be redeclared
+            3.Cannot be reassigned
+    [
+    const x = 2 ;
+    const x = 3 ;(not allowed)
+    x = 4 ; (not allowed)
+    ]
+    [
+        const x = 2 ;
 
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
+        {
+            const x = 1 ;
+        }
+        console.log(x) //2
+    ]
 
 
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
 
 
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
+ 2️⃣ What is the spread operator (...)?
+ Ans:
+ (...) => It expands elements of an array or object .
 
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
+ [
+    const arr1 = [1,2,3];
+    const arr2 = [...arr1 ,4,5] ;
+    console.log(arr2) //[1,2,3,4,5]
+ ]
+ [
+    const obj1 = {name:"tom",age:34}
+    const obj2 = {
+        ...obj1 ,
+        country :"canada"
+        weight  :"75 kg"}
+    console.log(obj2) //{name:"tom", age:34, country: "canada", weight: "75 kg"}
+ ]
 
 
----
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+ 3️⃣ What is the difference between map(), filter(), and forEach()?
+ Ans:
+ map() => It is used to modify or transform every element of a array.
+   [
+    const arr = [2,3,4,5];
+    const arr2 = arr.map(num => num * 2);
+    console.log(arr2) //[4,6,8,10]
+   ]
+
+filter() => It is used to select elements that match the condition.
+   [
+    const arr = [1,2,3,4,5];
+    const arr2 =arr.filter(num => num%2 === 0);
+    console.log(arr2)  //[2,4]
+   ]
+
+forEach() => It is used to loop through each element of a array.
+   [
+    const arr = [1,2,3,4,5];
+    arr.forEach(num=>{
+        console.log(num)
+    })
+       //  1
+           2
+           3
+           4
+           5
+   ]
 
 
-## 📤 What to submit
+ 4️⃣ What is an arrow function?
+ Ans:
+ Arrow function => Arrow functions are a shorter syntax for writing functions in JavaScript .
+  [
+    const square = x => x*x ;
 
-- **GitHub Repository Link:**
-- **Live Site Link:**
+    const sayHello =() => console.log("Hello, Sir");
 
----
+    const sum = (a , b , c) =>{
+        const result = a+b+c ;
+        return result ;
+    }
 
+    console.log(square(2)); // 4 
+    sayHello();  //Hello, Sir
+    console.log(sum(1,2,3));  //6
+    ]
 
+ 5️⃣ What are template literals?
+  Ans:
+
+  [
+    const name = "rahim"
+    const greet = `Hello ${name}`
+    const sum = `sum will be ${4+4+4}`
+    const sentence = `My name
+    is rahim. I am 6 years old .`
+  ]

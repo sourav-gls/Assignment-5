@@ -195,7 +195,7 @@ function loadModal(id){
       modalPriorityDiv.innerHTML = priority(obj.priority);
       modalStatusDiv.innerHTML = isOpen(obj.status);
       modalAuthor.innerText = obj.author ;
-      modalAssignee.innerText = obj.assignee ;
+      modalAssignee.innerText = obj.assignee==="" ? "No Name" : obj.assignee ;
 
 
    })
